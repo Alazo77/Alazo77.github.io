@@ -437,12 +437,12 @@ footer p {
         text-align: center;
     }
 
-    #projects .container {
-        padding: 0 5px; 
+    #work .container {
+        padding: 0 5px;
     }
 
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .skills-table {
@@ -457,3 +457,53 @@ footer p {
         padding-bottom: 30px;
     }
 }
+
+/* --- 10. Portfolio additions --- */
+header .header-focus { font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-top: -20px; opacity: .75; }
+.section-alt { background: var(--white-color); }
+.section-intro { text-align:center; max-width:700px; margin:-30px auto 50px; color:var(--light-text-color); font-size:1.1rem; }
+nav ul { flex-wrap: wrap; }
+.info-grid, .bring-grid, .experience-grid { display:grid; gap:30px; max-width:960px; margin:60px auto 0; }
+.info-grid { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+.bring-grid { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); margin-top:0; max-width:1100px; }
+.experience-grid { grid-template-columns:1fr 1fr; margin-top:0; align-items:start; }
+.info-card { background:var(--card-bg-color); padding:30px; border-radius:5px; border-top:3px solid var(--accent-color); box-shadow:0 8px 25px rgba(0,0,0,.06); }
+.section-alt .info-card { background:var(--light-bg-color); }
+.info-card h3 { font-family:var(--font-heading); color:var(--primary-color); font-size:1.4rem; margin-bottom:12px; }
+.info-card h3 i { color:var(--accent-color); margin-right:8px; }
+.info-card p { color:var(--light-text-color); margin-bottom:10px; }
+.info-title { color:var(--primary-color)!important; font-weight:700; margin-bottom:0!important; }
+.info-meta { font-size:.95rem; font-style:italic; }
+.timeline { border-left:3px solid var(--accent-color); padding-left:30px; }
+.timeline-item { margin-bottom:40px; position:relative; }
+.timeline-item::before { content:''; position:absolute; left:-40px; top:8px; width:14px; height:14px; border-radius:50%; background:var(--primary-color); border:3px solid var(--accent-color); }
+.timeline-item h3 { font-family:var(--font-heading); color:var(--primary-color); font-size:1.7rem; }
+.timeline-role { font-weight:700; color:var(--secondary-color); }
+.timeline-date { color:var(--light-text-color); }
+.check-list { list-style:none; }
+.check-list li { padding:6px 0 6px 28px; position:relative; }
+.check-list li::before { content:'\2713'; position:absolute; left:0; color:var(--accent-color); font-weight:700; }
+.work-card-top { background:var(--primary-color); color:#fff; display:flex; justify-content:space-between; align-items:center; padding:18px 30px; }
+.work-number { font-family:var(--font-heading); font-size:2rem; color:var(--accent-color); }
+.work-tag { text-transform:uppercase; letter-spacing:1.5px; font-size:.8rem; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+.chips span { background:#e8f4fc; color:var(--secondary-color); font-size:.8rem; padding:3px 12px; border-radius:20px; }
+.project-card-content h4 { color:var(--secondary-color); text-transform:uppercase; letter-spacing:1px; font-size:.8rem; margin:10px 0 4px; }
+.project-card-content .work-list { list-style:none; margin-bottom:10px; }
+.work-list li { color:var(--light-text-color); padding-left:20px; position:relative; }
+.work-list li::before { content:'\203A'; position:absolute; left:0; color:var(--accent-color); font-weight:700; }
+.project-card-content p { margin-bottom:10px; flex-grow:0; }
+.approach-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; }
+.step { padding:30px 18px; text-align:center; background:var(--light-bg-color); border:1px solid #e9ecef; }
+.step-dark { background:var(--primary-color); color:#fff; border-color:var(--primary-color); }
+.step-number { font-family:var(--font-heading); color:var(--accent-color); font-size:1.4rem; }
+.step h3 { font-family:var(--font-heading); font-size:1.5rem; margin:5px 0 10px; }
+.step:not(.step-dark) h3 { color:var(--primary-color); }
+.step p { font-size:.9rem; }
+.approach-tagline { text-align:center; margin-top:40px; font-family:var(--font-heading); font-size:1.3rem; color:var(--primary-color); }
+.contact-links { list-style:none; text-align:center; margin-bottom:40px; }
+.contact-links li { padding:6px 0; font-size:1.1rem; }
+.contact-links i { color:var(--accent-color); margin-right:10px; width:20px; }
+.skill-list li strong { color:var(--primary-color); }
+@media (max-width:992px){ .approach-steps{grid-template-columns:1fr 1fr;} .experience-grid{grid-template-columns:1fr;} }
+@media (max-width:768px){ .section{padding:60px 0;} .section h2{font-size:2.2rem;margin-bottom:50px;} .approach-steps{grid-template-columns:1fr;} nav ul li a{padding:10px 12px;font-size:.9rem;} .profile-photo{width:200px;height:200px;} .section-intro{margin-top:-20px;} }
